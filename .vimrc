@@ -56,7 +56,7 @@ set background=dark
 colorscheme molokai
 
 " load the man plugin
-source $VIM/ftplugin/man.vim
+source $VIMRUNTIME/ftplugin/man.vim
 map <silent> <F3> :Man <cword><CR>
 
 set softtabstop=4
