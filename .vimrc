@@ -52,9 +52,6 @@ else
   set autoindent		" always set autoindenting on
 endif " has("autocmd")
 
-set background=dark
-colorscheme molokai
-
 " load the man plugin
 source $VIMRUNTIME/ftplugin/man.vim
 map <silent> <F3> :Man <cword><CR>
@@ -74,6 +71,9 @@ map <silent> <F2> <C-]>
 " let pathogen do its stuff
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+set background=dark
+colorscheme molokai
 
 " CtrlP defaults are retarded
 let g:ctrlp_regexp = 1
