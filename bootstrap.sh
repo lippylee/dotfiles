@@ -9,5 +9,5 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
 rm -i ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
-rm -irf ~/.vim
+rm -ir ~/.vim
 ln -s ~/dotfiles/.vim ~/.vim
