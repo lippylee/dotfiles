@@ -11,3 +11,5 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 rm -ir ~/.vim
 ln -s ~/dotfiles/.vim ~/.vim
+
+git submodule update --init
