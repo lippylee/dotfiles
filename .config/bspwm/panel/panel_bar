@@ -2,7 +2,7 @@
 #
 # Example panel for LemonBoy's bar
 
-logo="\\f7  \\f9 kreator"
+logo="\\f7  \\f9 $(hostname -s)"
 while read -r line ; do
 	case $line in
 	S*)
