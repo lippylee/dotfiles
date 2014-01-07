@@ -1,15 +1,33 @@
 #!/bin/bash
 
-rm -i ~/.inputrc
-ln -s ~/dotfiles/.inputrc ~/.inputrc
+BASE_FILES=".bashrc \
+	.bashrc-prompt \
+	.colordiffrc \
+	.compton.conf \
+	.dircolors \
+	.gtkrc-2.0 \
+	.inputrc \
+	.vimrc \
+	.xinitrc \
+	.Xresources \
+	.yaourtrc"
 
-rm -i ~/.bashrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
+BASE_DIRS=".vim"
 
-rm -i ~/.vimrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+CONFIG_DIRS="bspwm \
+	gtk-3.0 \
+	sxhkd"
 
-rm -ir ~/.vim
-ln -s ~/dotfiles/.vim ~/.vim
+for F in $BASE_FILES $BASE_DIRS
+do
+	rm -rf $F
+	ln -s dotfiles/$F
+done
 
-git submodule update --init
+for F in $CONFIG_DIRS
+do
+	rm -rf .config/$F
+	ln -s dotfiles/.config/$F .config/
+done
+
+echo git submodule update --init

@@ -1,0 +1,23 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 3
+
+TEXT
+S\fr\f7 \
+ ${addr enp0s25}  \
+ / ${fs_bar /} \
+/home ${fs_bar /home}  \
+ ${membar}  \
+${if_match ${cpu cpu0} > 75}\
+\f9${endif}\
+ ${cpubar cpu0} \f7\
+${if_match ${platform coretemp.0 temp 1} > 59}\
+\f9${endif}\
+ ${platform coretemp.0 temp 1}° \f7\
+ ${platform nct6683.2592 fan 1} \
+${platform nct6683.2592 fan 2} \
+${platform nct6683.2592 fan 3}  \
+${exec ./panel_volume}  \
+ ${execi 3600 curl -m 2 -s 'http://api.openweathermap.org/data/2.5/weather?id=3193935&units=metric' | jq .main.temp}°  \
+ ${time %a %d.%m.%Y. %H:%M}

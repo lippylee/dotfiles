@@ -13,6 +13,8 @@ set ruler                       " show the cursor position all the time
 set showcmd                     " display incomplete commands
 set incsearch                   " do incremental searching
 set nowrap                      " don't word wrap lines
+set hidden			" don't fucking whine about unsaved buffers
+set list lcs=trail:·,tab:»·	" show whitespace
 
 " Don't use Ex mode, use Q for formatting
 map Q gq 
@@ -56,9 +58,9 @@ endif " has("autocmd")
 source $VIMRUNTIME/ftplugin/man.vim
 map <silent> <F3> :Man <cword><CR>
 
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
+set softtabstop=8
+set shiftwidth=8
+set tabstop=8
 set ignorecase
 set nu " show line numbers
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
@@ -73,12 +75,14 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set background=dark
+let g:molokai_original = 1
 colorscheme molokai
 
-" CtrlP defaults are retarded
 let g:ctrlp_regexp = 1
-let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = ''
-let g:ctrlp_user_command = 'find %s -name *.[ch]'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_height = 30
+let g:ctrlp_max_files = 0
+
+let g:airline_powerline_fonts = 1

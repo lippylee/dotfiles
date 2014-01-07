@@ -1,0 +1,21 @@
+URxvt*background: [95]#1d1d1d
+URxvt*foreground: grey
+URxvt*depth: 32
+URxvt*scrollColor: #232c31
+URxvt*font: -xos4-terminesspowerline-medium-r-normal--0-0-72-72-c-0-iso10646-1
+URxvt*boldFont: -xos4-terminesspowerline-bold-r-normal--0-0-72-72-c-0-iso10646-1
+URxvt*scrollBar_right: true
+URxvt*perl-ext-common: default,clipboard
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+URxvt*termName: rxvt-256color
+URxvt*saveLines: 65535
+URxvt*cutchars: "\\ `\"'&()*,;<=>?@[]^{|}:"
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
