@@ -4,7 +4,7 @@ URxvt*depth: 32
 URxvt*scrollColor: #232c31
 URxvt*font: -xos4-terminesspowerline-medium-r-normal--0-0-72-72-c-0-iso10646-1
 URxvt*boldFont: -xos4-terminesspowerline-bold-r-normal--0-0-72-72-c-0-iso10646-1
-URxvt*scrollBar_right: true
+URxvt*scrollBar: 0
 URxvt*perl-ext-common: default,clipboard
 URxvt*iso14755: false
 URxvt*iso14755_52: false
