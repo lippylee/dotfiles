@@ -10,6 +10,7 @@ export EDITOR=vim
 export HISTCONTROL=ignoredups
 export PAGER=less
 export QT_SELECT=4
+export USE_CCACHE=1
 
 alias diff='colordiff -u'
 alias less='less -S -#5 -q -R'
