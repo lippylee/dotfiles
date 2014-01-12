@@ -9,7 +9,7 @@ icon=$icon_rest
 
 if [ $volume -eq 0 ]; then
 	icon=$icon_mute
-elif [ $volume -eq 100 ]; then
+elif [ $volume -gt 75 ]; then
 	icon=$icon_full
 fi
 

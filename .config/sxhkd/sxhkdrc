@@ -95,7 +95,28 @@ alt + Return
     urxvt
 
 alt + d
-    dmenu_run -fn -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1 -nb '#232c31' -nf '#6c7a80' -sf '#ac4142' -sb '#232c31'
+    dmenu_run -l 20 -w 200 -y 18 -fn -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1 -nb '#232c31' -nf '#6c7a80' -sf '#ac4142' -sb '#232c31' -o 0.95
+
+alt + F1
+    ~/.config/bspwm/panel/scripts/toggle_conky net
+
+alt + F2
+    ~/.config/bspwm/panel/scripts/toggle_conky disk
+
+alt + F3
+    ~/.config/bspwm/panel/scripts/toggle_conky mem
+
+alt + F4
+    ~/.config/bspwm/panel/scripts/toggle_conky cpu
+
+alt + F5
+    ~/.config/bspwm/panel/scripts/toggle_conky temp
+
+alt + F6
+    ~/.config/bspwm/panel/scripts/toggle_conky mpd
+
+alt + F7
+    ~/.config/bspwm/panel/scripts/toggle_conky cal
 
 # make sxhkd reload its configuration files:
 super + Escape
