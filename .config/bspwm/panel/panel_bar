@@ -2,7 +2,7 @@
 #
 # Example panel for LemonBoy's bar
 
-logo="\\f7\\ab  \\f9 $(hostname -s)\ac ~/.config/bspwm/panel/scripts/spawn_dmenu \ae"
+logo="\\f7\\ab  \\f9 $(hostname -s)\\ac ~/.config/bspwm/panel/scripts/spawn_dmenu \\ae"
 while read -r line ; do
 	case $line in
 	S*)
