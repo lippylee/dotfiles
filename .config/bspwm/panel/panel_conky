@@ -3,17 +3,19 @@ out_to_console yes
 out_to_x no
 update_interval 3
 
+template0 ~/.config/bspwm/panel/scripts/toggle_conky \1
+
 TEXT
 S\fr\f7 \
-\am ${addr enp0s25}\aM  \
-\an / ${fs_used_perc /}% \
-/home ${fs_used_perc /home}%\aN  \
-\ao ${memperc}%\aO  \
+\ab ${addr enp0s25}\ac${template0 net}\ae  \
+\ab / ${fs_used_perc /}% \
+/home ${fs_used_perc /home}%\ac${template0 disk}\ae  \
+\ab ${memperc}%\ac${template0 mem}\ae  \
 ${if_match ${cpu cpu0} > 75}\
 \f9${endif}\
-\ap ${cpu cpu0}%\aP\f7 \
+\ab ${cpu cpu0}%\ac${template0 cpu}\ae\f7 \
 ${if_match ${platform coretemp.0 temp 1} > 59}\
 \f9${endif}\
-\aq ${platform coretemp.0 temp 1}°\aQ\f7  \
-\ar${exec scripts/panel_volume}\aR  \
-\as ${time %a %d.%m.%Y. %H:%M}\aS
+\ab ${platform coretemp.0 temp 1}°\ac${template0 temp}\ae\f7  \
+\ab${exec scripts/panel_volume}\ac${template0 mpd}\ae  \
+\ab ${time %a %d.%m.%Y. %H:%M}\ac${template0 cal}\ae
