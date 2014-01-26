@@ -11,6 +11,7 @@ URxvt*iso14755_52: false
 URxvt*termName: rxvt-256color
 URxvt*saveLines: 65535
 URxvt*cutchars: "\\ `\"'&()*,;<=>?@[]^{|}:"
+URxvt*urgentOnBell: true
 
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
